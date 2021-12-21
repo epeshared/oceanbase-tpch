@@ -1,7 +1,7 @@
 # oceanbase-tpch
 
 系统租户
-'alter system set system_memory='15g';
+alter system set system_memory='15g';
 alter resource unit sys_unit_config max_memory='15g',min_memory='15g';
 alter system set enable_merge_by_turn= False;
 alter system set trace_log_slow_query_watermark='100s';
@@ -16,7 +16,7 @@ alter system set merge_thread_count=20;
 alter system set cache_wash_threshold='30g';
 alter system set syslog_level='PERF';
 alter system set max_syslog_file_count=100;
-alter system set enable_syslog_recycle='True';'
+alter system set enable_syslog_recycle='True';
 
 
 设置租户
