@@ -1,5 +1,6 @@
 # oceanbase-tpch
 
+## oceanbase configuration for tpch
 系统租户<br>
 alter system set system_memory='15g';<br>
 alter resource unit sys_unit_config max_memory='15g',min_memory='15g';<br>
@@ -31,3 +32,12 @@ set global secure_file_priv="";<br>
 
 <br>
 grant file on *.* to tpch_100g_part;<br>
+
+## load ddl
+* cd to /path/to/TPC-H_Tools_v3.0.0/dbgen/load
+* create_tpch_mysql_table_part.ddl
+* python load.py
+
+## queries
+* cd to /path/to/TPC-H_Tools_v3.0.0/dbgen/queries
+* ./tpch.sh
