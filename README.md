@@ -28,9 +28,9 @@ alter system set ob_enable_batched_multi_statement='true';<br>
 set global ob_query_timeout=36000000000;<br>
 set global ob_trx_timeout=36000000000;<br>
 set global max_allowed_packet=67108864;<br>
-set global secure_file_priv="";<br>
 
 <br>
+set global secure_file_priv="";<br>
 grant file on *.* to tpch_100g_part;<br>
 
 ## load ddl
