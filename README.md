@@ -35,7 +35,7 @@ grant file on *.* to tpch_100g_part;<br>
 
 ## load ddl
 * cd to /path/to/TPC-H_Tools_v3.0.0/dbgen/load
-* create_tpch_mysql_table_part.ddl
+* source /path/to/TPC-H_Tools_v3.0.0/dbgen/load/create_tpch_mysql_table_part.ddl
 * python load.py
 
 ## queries
