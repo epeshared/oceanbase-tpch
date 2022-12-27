@@ -1,7 +1,7 @@
 # oceanbase-tpch
 
 ## Oceanbase 4.0.0 配置
-* tpch配置 https://www.oceanbase.com/docs/community-observer-cn-10000000000901377 \
+* tpch配置 https://www.oceanbase.com/docs/community-observer-cn-10000000000901377
 * 租户配置 https://github.com/oceanbase/obdeploy/blob/master/docs/zh-CN/3.user-guide/3.obd-command/1.cluster-command-groups.md#obd-cluster-tenant-create
 
 ## oceanbase configuration for tpch
