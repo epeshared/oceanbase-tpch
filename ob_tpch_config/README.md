@@ -37,7 +37,7 @@
  /* alter system set  default_compress_func = 'lz4_1.0';
   alter system set  default_compress_func = 'zstd_1.3.8';*/
   
-  2.3 租户配置
+  2.3 切换到租户，配置参数
   set global ob_sql_work_area_percentage = 80;
   set global optimizer_use_sql_plan_baselines = True;
   set global optimizer_capture_sql_plan_baselines = True;
@@ -69,13 +69,12 @@
   analyze table nation compute statistics for all columns size auto; 
   analyze table region compute statistics for all columns size auto;
 6. 测试
-  python3 
+  python3 multi_ins_test.py
 
-
-5.如果导入数据出现权限问题，执行该命令
+7.如果导入数据出现权限问题，执行该命令
 obclient -S ob_data/run/sql.sock  -utpch@tpch_mysql -p123 -e "set global secure_file_priv = '';"
 
-6.创建表的ddl文件中，BLOCK_SIZE 65536，性能最好， partitions 32 最好和可用cpu数量一致，在8C16T的情况下，32性能要更好一些，db.sql /*parallel(16)*/,一般和可用cpu数量一致。
+8.创建表的ddl文件中，BLOCK_SIZE 65536，性能最好， partitions 32 最好和可用cpu数量一致，在8C16T的情况下，32性能要更好一些，db.sql /*parallel(16)*/,一般和可用cpu数量一致。
 
 参考
 https://www.oceanbase.com/docs/common-oceanbase-database-cn-0000000001953497
