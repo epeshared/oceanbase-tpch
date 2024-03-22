@@ -67,3 +67,6 @@ analyze table region compute statistics for all columns size auto;
 obclient -S ob_data/run/sql.sock  -utpch@tpch_mysql -p123 -e "set global secure_file_priv = '';"
 
 6.创建表的ddl文件中，BLOCK_SIZE 65536，性能最好， partitions 32 最好和可用cpu数量一致，在8C16T的情况下，32性能要更好一些，db.sql /*parallel(16)*/,一般和可用cpu数量一致。
+
+参考
+https://www.oceanbase.com/docs/common-oceanbase-database-cn-0000000001953497
