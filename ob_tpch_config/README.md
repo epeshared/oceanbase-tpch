@@ -1,6 +1,6 @@
-1. 创建实例
+1. 创建实例 \
     obd cluster depoly ob_ins1 -c ob_config.yaml \
-    obd cluster start ob_ins1
+    obd cluster start ob_ins1 \
 2. 参数配置
   2.1 创建租户
   create resource unit tpch_unit max_cpu 16, memory_size '50g',MIN_CPU 16,log_disk_size '30g';
