@@ -48,7 +48,8 @@
   set global parallel_servers_target = 896; \
   set global _groupby_nopushdown_cut_ratio = 1; \
  \
-  CREATE USER tpch IDENTIFIED BY password '*e9c2bcdc178a99b7b08dd25db58ded2ee5bff050' ;  \
+  #CREATE USER tpch IDENTIFIED BY password '*e9c2bcdc178a99b7b08dd25db58ded2ee5bff050' ;  \
+  CREATE USER tpch IDENTIFIED BY password '123' ;  \
   grant all privileges on *.* to tpch@'%' identified by '123'; \
  \
 3. 参数配置成功后，需要重启实例 \
