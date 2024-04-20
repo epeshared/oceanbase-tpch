@@ -32,7 +32,7 @@
   alter system set large_query_threshold='1s'; \
   alter system flush plan cache global; \
   alter system set _io_callback_thread_count =16; \
-  grant all privileges on *.* to root@'%' identified by '123'; \
+  GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123';
   
   alter system set  default_compress_func = 'zlib_lite_1.0'; \
  /* alter system set  default_compress_func = 'lz4_1.0'; \
