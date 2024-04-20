@@ -1,5 +1,5 @@
 1. 创建实例 \
-    obd cluster depoly ob_ins1 -c ob_config.yaml \
+    obd cluster deploy ob_ins1 -c ob_config.yaml \
     obd cluster start ob_ins1 
 2. 参数配置 \
   2.1 创建租户 \
