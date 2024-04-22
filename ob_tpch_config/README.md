@@ -73,7 +73,7 @@
   python3 multi_ins_test.py \
 
 7.如果导入数据出现权限问题，执行该命令 \
-obclient -S ob_data/run/sql.sock  -utpch@tpch_mysql -p123 -e "set global secure_file_priv = '';" \
+obclient -S ob_data/run/sql.sock  -utpch@tpch_mysql -p123 -e "set global secure_file_priv = '/';" 
 
 8.创建表的ddl文件中，BLOCK_SIZE 65536，性能最好， partitions 32 最好和可用cpu数量一致，在8C16T的情况下，32性能要更好一些，db.sql /*parallel(16)*/,一般和可用cpu数量一致。 \
  \
