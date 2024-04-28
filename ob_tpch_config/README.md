@@ -55,10 +55,11 @@
 4. 导入数据 \
    python3 load.py \
 5. 导入数据后，需要执行以下SQL \
-  root@tpch \
+  login as root \
   alter system major freeze tenant=tpch_mysql; \
   select FROZEN_SCN, LAST_SCN from oceanbase.CDB_OB_MAJOR_COMPACTION; \
  \
+  login as root@tpch_mysql
   use tpch_100g_qpl; \
   set _force_parallel_query_dop = 112; \
   analyze table lineitem partition(lineitem) compute statistics for all columns size auto;  \
