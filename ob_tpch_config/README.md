@@ -1,3 +1,8 @@
+准备 \
+ulimit -n 655350 \
+ulimit -c unlimited \
+ulimit -s unlimited \
+
 1. 创建实例 \
     obd cluster deploy ob_ins1 -c ob_config.yaml \
     obd cluster start ob_ins1 
