@@ -2,18 +2,19 @@ oceanbase-ce:
   servers:
   - 127.0.0.1
   global:
-    home_path: /opt/oceanbase/ob_data
+    home_path: /opt/oceanbase/ob_data4.3/ob_data4
     devname: lo
-    mysql_port: 3881
-    rpc_port: 3882
+    mysql_port: 4881
+    rpc_port: 4882
     zone: zone1
     cluster_id: 1
-    memory_limit: 100G
+    memory_limit: 50G
     system_memory: 12G
     __min_full_resource_pool_memory: 5368709120
-    datafile_size: 50G
-    log_disk_size: 50G
+    datafile_size: 30G
+    log_disk_size: 30G
     syslog_level: ERROR
     enable_syslog_recycle: true
     max_syslog_file_count: 4
+    root_password: 123
 

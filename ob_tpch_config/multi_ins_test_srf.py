@@ -3,11 +3,12 @@ import os
 import time
 import _thread  as thread
 import random
+import subprocess
 
 TPCH_SQL= [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
 SQL_TOTAL_NUM=22
 TPCH_CLIENT = 8
-CLIENT_START_NUM=[1,1,1,1,1,1,1,1,1]
+CLIENT_START_NUM=[9,10,13,1,21,20,18,7,16]
 OB_PORT = [1881,2881,3881,4881,5881,6881,7881,8881,9881]
 ALL_result={}
 query_dir = "/opt/oceanbase/oceanbase-tpch/TPC-H_Tools_v3.0.0/dbgen/queries/"
@@ -68,6 +69,7 @@ def analysis_data():
 if __name__ == "__main__":
     #测试
     client = 0
+    process = subprocess.Popen("emon -collect-edp > emon.dat &", shell=True)
     while client <= TPCH_CLIENT:
         thread_name = "client_%d" % client
         thread.start_new_thread(excute_sql, (thread_name,client))
@@ -75,10 +77,11 @@ if __name__ == "__main__":
         
     while 1:
         if len(ALL_result) == (TPCH_CLIENT+1):
+            subprocess.run("emon -stop", shell=True)
             analysis_data()
             break 
-        else:
-            time.sleep(10)
+        # else:
+        #     time.sleep(0.010)
     
 
 
